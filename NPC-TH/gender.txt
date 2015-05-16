@@ -2,7 +2,7 @@
 //---------------------------------------------------
 // Change Sex
 //---------------------------------------------------
-// By: Perdomo	Version: 3.0
+// By: Perdomo	Version: 3.0 แปลไทยโดย jumpzuza
 //---------------------------------------------------
 // Description:
 //  Changes the characters gender
@@ -12,24 +12,24 @@
 //	- 2.0 Script fixed [ToTTi]
 //	- 3.0 Script edited and translated by [Yoh Asakura]
 //---------------------------------------------------
-prontera,138,172,5	script	Change Sex	754,{
+prontera,138,172,5	script	เปลี่ยนเพศ	754,{
 
 set .n$, "[ ^FF0000Surgeon^000000 ]";
 
-set @price,10000000; // Price that will be charged . 
+set @price,10000000; // จำนวนเงินที่ใช้ในการเปลี่ยนเพศ . 
 
 mes .n$;
 mes "";
-mes "Hello ^0000FF"+strcharinfo(0)+"^000000.";
-mes "Would you like to change your sex?";
-mes "The price for it is ^FF000010kk^000000";
+mes "สวัสดี ^0000FF"+strcharinfo(0)+"^000000.";
+mes "คุณต้องการเปลี่ยนเพศใช้หรือเปล่า?";
+mes "ต้องใช้เงินในการแปลงเพศคือ ^FF000010kk^000000";
 
 if(select("Yes:No, thanks")==2) { close; }
 
 if(Zeny < @price){
 next;
 mes .n$;
-mes "Sorry, you don't have enough money.";
+mes "ขอโทษนะ, คุณมีเงินไม่พอ.";
 close;
 
 }
@@ -39,7 +39,7 @@ else
 {
 
 mes .n$;
-mes "Alright, here we go.";
+mes "เอาล่ะ, ไปกันเลย.";
 set Zeny,Zeny-10000000;
 close2;
 changesex;
