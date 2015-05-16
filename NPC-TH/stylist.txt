@@ -19,8 +19,8 @@ prontera,170,180,1	script	Stylist#custom_stylist	2_M_DYEINGER,{
 	set .@style,1;
 	while(1) {
 		setlook .@Look[.@s], .@style;
-		message strcharinfo(0),"This is style #"+.@style+".";
-		set .@menu$, " ~ Next (^0055FF"+((.@style!=.@styles[.@s])?.@style+1:1)+"^000000): ~ Previous (^0055FF"+((.@style!=1)?.@style-1:.@styles[.@s])+"^000000): ~ Jump to...: ~ Revert to original (^0055FF"+.@Revert+"^000000)";
+		message strcharinfo(0),"ทรงที่ #"+.@style+".";
+		set .@menu$, " ~ ทรงต่อไป (^0055FF"+((.@style!=.@styles[.@s])?.@style+1:1)+"^000000): ~ ทรงก่อนหน้า (^0055FF"+((.@style!=1)?.@style-1:.@styles[.@s])+"^000000): ~ ข้ามไปที่...: ~ Revert to original (^0055FF"+.@Revert+"^000000)";
 		switch(select(.@menu$)) {
 			case 1: set .@style, ((.@style!=.@styles[.@s])?.@style+1:1); break;
 			case 2: set .@style, ((.@style!=1)?.@style-1:.@styles[.@s]); break;
